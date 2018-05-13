@@ -11,7 +11,7 @@ pip install oec
 ## Usage
 See the OEC website for details about acceptable parameters for an API call: https://atlas.media.mit.edu/api/   
 
-Check out `help.txt` or run `pydoc oec` to view function-level documentation.
+Check out [`help.txt`](https://github.com/yahiaali/oec/blob/master/help.txt) or run `python -m pydoc oec` to view function-level documentation.   
 
 **Get data from the OEC website**
 ```
