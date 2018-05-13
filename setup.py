@@ -13,7 +13,7 @@ with open('README.md') as f:
 
 setup(
       name='oec',
-      version='0.2.0',
+      version='0.2.1',
       description='API Wrapper for The Observatory for Economic Complexity',
       long_description=long_description,
       long_description_content_type='text/markdown',
