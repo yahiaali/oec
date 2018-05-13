@@ -13,7 +13,7 @@ with open('README.md') as f:
 
 setup(
       name='oec',
-      version='0.2.1',
+      version='0.2.3',
       description='API Wrapper for The Observatory for Economic Complexity',
       long_description=long_description,
       long_description_content_type='text/markdown',
@@ -24,4 +24,5 @@ setup(
       classifiers=classifiers,
       install_requires=['requests'],
       python_requires='>=3',
+      py_modules=['oec']
 )
