@@ -1,0 +1,193 @@
+Help on module oec:
+
+NAME
+    oec
+
+DESCRIPTION
+    This module serves as an API wrapper for The Observatory for Economic
+    Complexity (OEC).
+
+    Details about the OEC API can be found at https://atlas.media.mit.edu/api
+
+    List of avaiable language codes for visualizations:
+    'en'    English
+    'ar'    Arabic
+    'de'    German
+    'el'    Greek
+    'es'    Spanish
+    'fr'    French
+    'he'    Hebrew
+    'hi'    Hindi
+    'it'    Italian
+    'ja'    Japanese
+    'ko'    Korean
+    'mn'    Mongolian
+    'nl'    Dutch
+    'pt'    Portuguese
+    'ru'    Russian
+    'tr'    Turkish
+    'vi'    Vietnamese
+    'zh_cn' Chinese
+
+FUNCTIONS
+    build_call(*args)
+        Create a URL for a request to the OEC API.
+
+        Args:
+            *args (str): strings to be appended to the API call.
+
+        Returns:
+            str: url for the API request.
+
+    data_to_csv(json_list, filename)
+        Convert received list of JSON objects into a CSV file.
+
+        Args:
+            json_list (list): list of dictionaries produced by an API request.
+            filename (str): name of file to save results to.
+
+    dict_to_list(dict, header)
+        Convert a dictionary into a list in the order specified by the header.
+
+        Args:
+            dict (dict): dictionary containing data from an API request
+            header (str): list of fieldnames present in the data
+
+        Returns:
+            list: contents of dictionary in the order specified by the header
+
+    embed_visual(classification, trade_flow, year, origin, destination, product, visualization='tree_map', language='en', width=930, height=400, name=None, id=None)
+        Return HTML code for embedding a visualization into a webpage.
+
+        Args:
+            classification (str): specifies which product classification to use
+                (e.g. 'hs92', 'hs96', 'hs02', 'hs07', 'sitc').
+            trade_flow (str): specifies which trade value to show
+                (e.g. 'import', 'export').
+            year (str): specifies which year or range of years to show
+                (e.g. 2015, '2002.2005').
+            origin (str): specifies a country of origin ('egy'), whether to show
+                all countries ('show'), or whether to sum all imports regardless
+                of origin ('all').
+            destination (str): specifies a country of origin ('egy'), whether to
+                show all countries ('show'), or whether to sum all exports
+                regardless of origin ('all').
+            product (str): specifies whether to show all products ('show'), sum the
+                data regardless of product ('all'), or show a particular product.
+            visualization (str): specifies which visualization to show. Defaults
+                to 'tree_map'.
+            language (str): specifies the language used for the visualization.
+            width (int): width of visualization in pixels.
+            height (int): height of visualization in pixels.
+            name (str): optional iframe parameter.
+            id (str): optional iframe parameter.
+
+        Returns:
+            str: HTML code for embedding the visualization as an iframe
+
+    get_countries(filename=None)
+        Get a list of dictionaries with country attributes via an API request.
+
+        Args:
+            filename (str): write the result to this CSV file if specified.
+            Defaults to None.
+
+        Returns:
+            list of dictionaries containing results of the API request.
+
+    get_header(json_list)
+        Return a list of header strings for the give list of dictionaries.
+
+        Args:
+            json_list (list): list of dictionaries produced by an API request
+
+        Returns:
+            list: fieldnames used in the data.
+
+    get_products(classification, filename=None)
+        Get the results of an API request for product descriptions.
+
+        Args:
+            classification (str): string specifying which product classification to
+            use (e.g. 'hs92', 'hs96', 'hs02', 'hs07', 'sitc').
+
+        Returns:
+            list of dictionaries containing results of the API request.
+
+    get_trade(classification, trade_flow, year, origin, destination, product, filename=None)
+        Get the results of an API request for trade data.
+
+        Args:
+            classification (str): specifies which product classification to use
+                (e.g. 'hs92', 'hs96', 'hs02', 'hs07', 'sitc').
+            trade_flow (str): specifies which trade value to show
+                (e.g. 'import', 'export').
+            year (str): specifies which year or range of years to show
+                (e.g. 2015, '2002.2005').
+            origin (str): specifies a country of origin ('egy'), whether to show
+                all countries ('show'), or whether to sum all imports regardless
+                of origin ('all').
+            destination (str): specifies a country of origin ('egy'), whether to
+                show all countries ('show'), or whether to sum all exports
+                regardless of origin ('all').
+            product (str): specifies whether to show all products ('show'), sum the
+                data regardless of product ('all'), or show a particular product.
+            filename (str): name of file to save results to. Defaults to None.
+
+        Returns:
+            list of dictionaries containing results of the API request.
+
+    request_data(call_url)
+        Get the results of an API request.
+
+        Args:
+            call_url (str): URL for the API request specified as a string.
+
+        Returns:
+            list of dictionaries containing results of the API request.
+
+    trade_params(classification, trade_flow, year, origin, destination, product)
+        Return a dictionary of parameters for requesting trade data and
+        visualizations.
+
+        Args:
+            classification (str): specifies which product classification to use
+                (e.g. 'hs92', 'hs96', 'hs02', 'hs07', 'sitc').
+            trade_flow (str): specifies which trade value to show
+                (e.g. 'import', 'export').
+            year (str): specifies which year or range of years to show
+                (e.g. 2015, '2002.2005').
+            origin (str): specifies a country of origin ('egy'), whether to show
+                all countries ('show'), or whether to sum all imports regardless
+                of origin ('all').
+            destination (str): specifies a country of origin ('egy'), whether to
+                show all countries ('show'), or whether to sum all exports
+                regardless of origin ('all').
+            product (str): specifies whether to show all products ('show'), sum the
+                data regardless of product ('all'), or show a particular product.
+
+        Returns:
+            dictionary of parameters.
+
+    url_visual(classification, trade_flow, year, origin, destination, product, visualization='tree_map', language='en', embed=False)
+        Return URL for displaying a visualization in a browser.
+
+        Args:
+            classification (str): specifies which product classification to use
+                (e.g. 'hs92', 'hs96', 'hs02', 'hs07', 'sitc').
+            trade_flow (str): specifies which trade value to show
+                (e.g. 'import', 'export').
+            year (str): specifies which year or range of years to show
+                (e.g. 2015, '2002.2005').
+            origin (str): specifies a country of origin ('egy'), whether to show
+                all countries ('show'), or whether to sum all imports regardless
+                of origin ('all').
+            destination (str): specifies a country of origin ('egy'), whether to
+                show all countries ('show'), or whether to sum all exports
+                regardless of origin ('all').
+            product (str): specifies whether to show all products ('show'), sum the
+                data regardless of product ('all'), or show a particular product.
+            visualization (str): specifies which visualization to show. Defaults
+                to 'tree_map'.
+            language (str): specifies the language used for the visualization.
+            embed (bool): specifies whether the embed URL or regular URL is used
