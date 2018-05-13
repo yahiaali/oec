@@ -22,7 +22,7 @@ list_of_exports = oec.get_trade_data('hs07', 'export', 2015, 'egy', 'all', 'show
 ```
 These functions each return lists of dictionaries. Each of these dictionaries represents a "row" of data (e.g. one country or product). The fields of these dictionaries represent "columns" of data. This is easier to visualize if you output your data to a CSV file.
 
-**Output data to a CSV file***
+**Output data to a CSV file**
 ```
 oec.data_to_csv(list_of_dictionaries, 'results.csv')
 ```
