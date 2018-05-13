@@ -286,6 +286,9 @@ def url_visual(classification, trade_flow, year, origin, destination,
             to 'tree_map'.
         language (str): specifies the language used for the visualization.
         embed (bool): specifies whether the embed URL or regular URL is used
+
+    Returns:
+        str: URL for viewing the visualization
     """
     if embed:
         src = build_call(language, 'visualize', 'embed', visualization,
