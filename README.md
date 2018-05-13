@@ -16,9 +16,17 @@ See the OEC website for details about acceptable parameters for an API call: htt
 ```
 import oec
 
+# Set parameters in accordance with API documentation
+classification = 'hs92'
+trade_flow = 'export'
+year = 2015
+origin = 'egy'
+destination = 'all'
+product = 'show'
+
 list_of_countries = oec.get_countries()
-list_of_products = oec.get_products('hs92')
-list_of_exports = oec.get_trade_data('hs07', 'export', 2015, 'egy', 'all', 'show')
+list_of_products = oec.get_products(classification)
+list_of_exports = oec.get_trade_data(classification, trade_flow, year, origin, destination, product)
 ```
 These functions each return lists of dictionaries. Each of these dictionaries represents a "row" of data (e.g. one country or product). The fields of these dictionaries represent "columns" of data. This is easier to visualize if you output your data to a CSV file.
 
