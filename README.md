@@ -5,8 +5,7 @@
 
 ## Installation
 ```
-git clone https://github.com/yahiaali/oec.git
-pip3 install -r oec/requirements.txt
+pip install oec
 ```
 
 ## Usage
