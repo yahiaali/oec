@@ -192,7 +192,7 @@ def data_to_csv(json_list, filename):
         json_list (list): list of dictionaries produced by an API request.
         filename (str): name of file to save results to.
     """
-    with open('out.csv', 'w') as csvfile:
+    with open(filename, 'w') as csvfile:
         header = get_header(json_list)
         cw = csv.writer(csvfile)
         cw.writerow(header)
