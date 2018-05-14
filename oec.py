@@ -120,7 +120,8 @@ def get_trade(classification, trade_flow, year, origin, destination,
             show all countries ('show'), or whether to sum all exports
             regardless of origin ('all').
         product (str): specifies whether to show all products ('show'), sum the
-            data regardless of product ('all'), or show a particular product.
+            data regardless of product ('all'), or show a particular product
+            designated by a four-digit HS or SITC id.
         filename (str): name of file to save results to. Defaults to None.
 
     Returns:
@@ -154,7 +155,8 @@ def trade_params(classification, trade_flow, year, origin, destination,
             show all countries ('show'), or whether to sum all exports
             regardless of origin ('all').
         product (str): specifies whether to show all products ('show'), sum the
-            data regardless of product ('all'), or show a particular product.
+            data regardless of product ('all'), or show a particular product
+            designated by a four-digit HS or SITC id.
 
     Returns:
         dictionary of parameters.
@@ -241,7 +243,8 @@ def embed_visual(classification, trade_flow, year, origin, destination,
             show all countries ('show'), or whether to sum all exports
             regardless of origin ('all').
         product (str): specifies whether to show all products ('show'), sum the
-            data regardless of product ('all'), or show a particular product.
+            data regardless of product ('all'), or show a particular product
+            designated by a four-digit HS or SITC id.
         visualization (str): specifies which visualization to show. Defaults
             to 'tree_map'.
         language (str): specifies the language used for the visualization.
@@ -285,7 +288,8 @@ def url_visual(classification, trade_flow, year, origin, destination,
             show all countries ('show'), or whether to sum all exports
             regardless of origin ('all').
         product (str): specifies whether to show all products ('show'), sum the
-            data regardless of product ('all'), or show a particular product.
+            data regardless of product ('all'), or show a particular product
+            designated by a four-digit HS or SITC id.
         visualization (str): specifies which visualization to show. Defaults
             to 'tree_map'.
         language (str): specifies the language used for the visualization.
