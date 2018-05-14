@@ -7,13 +7,8 @@
 ```
 pip install oec
 ```
-
 ## Usage
-See the OEC website for details about acceptable parameters for an API call: https://atlas.media.mit.edu/api/   
-
-Check out [`help.txt`](https://github.com/yahiaali/oec/blob/master/help.txt) or run `python -m pydoc oec` to view function-level documentation.   
-
-**Get data from the OEC website**
+**Get data from OEC**
 ```
 import oec
 
@@ -31,13 +26,13 @@ list_of_exports = oec.get_trade(**params)
 ```
 These functions each return lists of dictionaries. Each of these dictionaries represents a "row" of data (e.g. one country or product). The fields of these dictionaries represent "columns" of data. This is easier to visualize if you output your data to a CSV file.
 
-**Output data to a CSV file**
+**Export to CSV**
 ```
 oec.data_to_csv(list_of_dictionaries, 'results.csv')
 ```
 These CSV files can then be opened up in the spreadsheet editor of your choice for further analysis.
 
-**Display visualizations**
+**Generate links to visualizations**
 ```
 >>> oec.url_visual(**params)
 'http://atlas.media.mit.edu/en/visualize/tree_map/hs92/export/egy/all/show/2015/'
@@ -46,6 +41,11 @@ These CSV files can then be opened up in the spreadsheet editor of your choice f
 >>> oec.url_visual(**params, language='fr')
 'http://atlas.media.mit.edu/fr/visualize/tree_map/hs92/export/egy/all/show/2015/'
 ```
+
+## Documentation
+**Function-level documentation and language list:** see [`help.txt`](https://github.com/yahiaali/oec/blob/master/help.txt) or run `python -m pydoc oec`   
+**OEC API documentation:** https://atlas.media.mit.edu/api/   
+**Data attributes and field names:** https://github.com/alexandersimoes/oec/wiki/Attributes   
 
 ## Acknowledgements
 Credits to [Alex Simoes](https://github.com/alexandersimoes) for the development of [The Observatory for Economic Complexity](https://atlas.media.mit.edu/en/). This module was developed by [Yahia Ali](https://github.com/yahiaali), who is not affiliated in any way with the OEC team.
