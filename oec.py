@@ -183,7 +183,9 @@ def get_header(json_list):
     header = set()
     for dict in json_list:
         header.update(dict.keys())
-    return list(header).sort()
+    header = list(header)
+    header.sort()
+    return header
 
 
 def data_to_csv(json_list, filename):
