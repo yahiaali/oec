@@ -56,9 +56,9 @@ These CSV files can then be opened up in the spreadsheet editor of your choice f
 
 ## Documentation
 
-**Function-level documentation and language list:** see [`help.txt`](https://github.com/yahiaali/oec/blob/master/help.txt) or run `python -m pydoc oec`   
-**[OEC API documentation](https://legacy.oec.world/api/)**
-**[Data attributes and field names](https://github.com/alexandersimoes/oec/wiki/Attributes)
+**Function-level documentation and language list:** see [`help.txt`](https://github.com/yahiaali/oec/blob/master/help.txt) or run `python -m pydoc oec`  
+**[OEC API documentation](https://legacy.oec.world/api/)**  
+**[Data attributes and field names](https://github.com/alexandersimoes/oec/wiki/Attributes)**
 
 ## Acknowledgements
 
