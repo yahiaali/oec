@@ -3,7 +3,7 @@ This module serves as an API wrapper for The Observatory for Economic
 Complexity (OEC).
 
 OEC API documentation:
-https://atlas.media.mit.edu/api/
+https://legacy.oec.world/api/
 
 Data attributes and field names:
 https://github.com/alexandersimoes/oec/wiki/Attributes
@@ -43,7 +43,7 @@ def build_call(*args):
     Returns:
         str: url for the API request.
     """
-    call_url = 'http://atlas.media.mit.edu/'
+    call_url = 'https://legacy.oec.world/'
     for val in args:
         call_url += str(val) + '/'
     return call_url

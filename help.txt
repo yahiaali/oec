@@ -7,7 +7,7 @@ DESCRIPTION
     This module serves as an API wrapper for The Observatory for Economic
     Complexity (OEC).
 
-    Details about the OEC API can be found at https://atlas.media.mit.edu/api
+    Details about the OEC API can be found at https://legacy.oec.world/api
 
     List of avaiable language codes for visualizations:
     'en'    English
